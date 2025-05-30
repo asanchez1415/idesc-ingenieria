@@ -1,37 +1,39 @@
-"use client"
+'use client';
 
-import type React from "react"
+import type React from 'react';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Instagram } from "lucide-react"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Mail } from 'lucide-react';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-    empresa: "",
-    mensaje: "",
-  })
+    nombre: '',
+    email: '',
+    telefono: '',
+    empresa: '',
+    mensaje: '',
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Aquí iría la lógica para enviar el formulario
-    console.log("Formulario enviado:", formData)
-  }
+    console.log('Formulario enviado:', formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -41,21 +43,30 @@ export default function ContactoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-extrabold mb-4 text-gray-dark font-heading">Contacto</h1>
-              <p className="text-xl text-gray-blue font-body">Estamos aquí para ayudarte con tu próximo proyecto</p>
+              <h1 className="text-4xl font-extrabold mb-4 text-gray-dark font-heading">
+                Contacto
+              </h1>
+              <p className="text-xl text-gray-blue font-body">
+                Estamos aquí para ayudarte con tu próximo proyecto
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Formulario */}
               <Card className="border-3 border-gray-light">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold font-heading text-gray-dark">Envíanos un mensaje</CardTitle>
+                  <CardTitle className="text-2xl font-bold font-heading text-gray-dark">
+                    Envíanos un mensaje
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="nombre" className="block text-sm font-medium text-gray-blue mb-2 font-body">
+                        <label
+                          htmlFor="nombre"
+                          className="block text-sm font-medium text-gray-blue mb-2 font-body"
+                        >
                           Nombre *
                         </label>
                         <Input
@@ -69,7 +80,10 @@ export default function ContactoPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-blue mb-2 font-body">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-gray-blue mb-2 font-body"
+                        >
                           Email *
                         </label>
                         <Input
@@ -86,7 +100,10 @@ export default function ContactoPage() {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="telefono" className="block text-sm font-medium text-gray-blue mb-2 font-body">
+                        <label
+                          htmlFor="telefono"
+                          className="block text-sm font-medium text-gray-blue mb-2 font-body"
+                        >
                           Teléfono
                         </label>
                         <Input
@@ -99,7 +116,10 @@ export default function ContactoPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="empresa" className="block text-sm font-medium text-gray-blue mb-2 font-body">
+                        <label
+                          htmlFor="empresa"
+                          className="block text-sm font-medium text-gray-blue mb-2 font-body"
+                        >
                           Empresa
                         </label>
                         <Input
@@ -114,7 +134,10 @@ export default function ContactoPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="mensaje" className="block text-sm font-medium text-gray-blue mb-2 font-body">
+                      <label
+                        htmlFor="mensaje"
+                        className="block text-sm font-medium text-gray-blue mb-2 font-body"
+                      >
                         Mensaje *
                       </label>
                       <Textarea
@@ -129,7 +152,10 @@ export default function ContactoPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-black">
+                    <Button
+                      type="submit"
+                      className="w-full bg-primary hover:bg-primary-dark text-black"
+                    >
                       Enviar Mensaje
                     </Button>
                   </form>
@@ -140,20 +166,25 @@ export default function ContactoPage() {
               <div className="space-y-8">
                 <Card className="border-3 border-gray-light">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-6 text-gray-dark font-heading">Información de Contacto</h3>
+                    <h3 className="text-xl font-semibold mb-6 text-gray-dark font-heading">
+                      Información de Contacto
+                    </h3>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
                         <Mail className="w-5 h-5 text-primary" />
                         <div>
                           <p className="font-medium">Email</p>
-                          <a href="mailto:contacto@idescgroup.cl" className="text-gray-blue hover:text-primary">
+                          <a
+                            href="mailto:contacto@idescgroup.cl"
+                            className="text-gray-blue hover:text-primary"
+                          >
                             contacto@idescgroup.cl
                           </a>
                         </div>
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <Instagram className="w-5 h-5 text-primary" />
+                        <Mail className="w-5 h-5 text-primary" />
                         <div>
                           <p className="font-medium">Instagram</p>
                           <a
@@ -170,7 +201,9 @@ export default function ContactoPage() {
 
                 <Card className="border-3 border-gray-light">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-dark font-heading">Sectores de Experiencia</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-dark font-heading">
+                      Sectores de Experiencia
+                    </h3>
                     <ul className="space-y-2 text-gray-blue font-body">
                       <li>• Minería</li>
                       <li>• Energía</li>
@@ -190,5 +223,5 @@ export default function ContactoPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
