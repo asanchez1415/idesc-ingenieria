@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail } from 'lucide-react';
+import { Mail, Instagram } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -116,7 +116,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-primary" />
+                <Instagram className="w-5 h-5 text-primary" />
                 <a
                   href="https://instagram.com/idesc_ingenieria"
                   className="text-gray-300 hover:text-primary transition-colors"

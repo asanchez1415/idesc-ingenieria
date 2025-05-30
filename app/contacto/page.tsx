@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail } from 'lucide-react';
+import { Mail, Instagram } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
@@ -184,7 +184,7 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <Mail className="w-5 h-5 text-primary" />
+                        <Instagram className="w-5 h-5 text-primary" />
                         <div>
                           <p className="font-medium">Instagram</p>
                           <a
