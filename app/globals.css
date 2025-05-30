@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colores primarios */
+    --color-primary: 57 96% 65%; /* rgb(252, 238, 79) - Nuevo Amarillo */
+    --color-primary-dark: 54 85% 55%; /* Versión más oscura del nuevo amarillo */
+    --color-white: 0 0% 100%; /* #FFFFFF */
+    --color-black: 0 0% 0%; /* #000000 */
+    --color-gray-dark: 220 13% 23%; /* #2D3748 */
+
+    /* Colores secundarios */
+    --color-gray-blue: 218 17% 35%; /* #4A5568 */
+
+    /* Colores de apoyo */
+    --color-success: 151 55% 42%; /* #38A169 - Verde Industrial */
+    --color-error: 360 84% 57%; /* #E53E3E - Rojo Suave */
+    --color-gray-light: 214 32% 91%; /* #E2E8F0 */
+
+    /* Variables de shadcn/ui */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 57 96% 65%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 13% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 218 17% 35%;
+    --accent: 57 96% 65%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 360 84% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 57 96% 65%;
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Header con transición suave */
+  header {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /* Bordes personalizados */
+  .border-3 {
+    border-width: 3px;
+  }
+
+  /* Animación del carrusel */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  /* Pausa la animación al hacer hover */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Tipografía refinada */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Jerarquía de títulos */
+  h1 {
+    @apply font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply font-medium;
+  }
+
+  /* Estilos de texto */
+  p {
+    @apply font-body font-normal leading-relaxed;
+  }
+
+  .text-lead {
+    @apply font-body font-medium text-lg;
+  }
+
+  .text-small {
+    @apply font-body font-light text-sm;
+  }
+
+  /* Estilos de botones */
+  .btn-primary {
+    @apply bg-primary text-black font-heading font-medium hover:bg-primary-dark rounded-none;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white font-body font-medium hover:bg-gray-blue rounded-none;
+  }
+
+  /* Navegación */
+  nav a {
+    @apply font-heading font-medium;
+  }
+}
