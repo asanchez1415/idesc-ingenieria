@@ -89,7 +89,7 @@ export default function ObrasCivilesPage() {
       </section>
 
       {/* Servicios Potenciales */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 font-heading">Áreas de Especialización</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,7 +154,7 @@ export default function ObrasCivilesPage() {
       </section>
 
       {/* Sectores de Aplicación */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 font-heading">Sectores de Aplicación</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

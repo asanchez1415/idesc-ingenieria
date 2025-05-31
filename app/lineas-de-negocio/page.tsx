@@ -86,7 +86,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Servicios Grid */}
-      <section className="py-20 bg-gray-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicios.map((servicio, index) => (
@@ -119,7 +119,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Sectores de Experiencia */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-dark font-heading">Sectores de Experiencia</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

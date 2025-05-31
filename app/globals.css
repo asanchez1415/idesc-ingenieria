@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Colores primarios */
-    --color-primary: 57 96% 65%; /* rgb(252, 238, 79) - Nuevo Amarillo */
-    --color-primary-dark: 54 85% 55%; /* Versión más oscura del nuevo amarillo */
+    --color-primary: 57 96% 65%; /* rgb(252, 238, 79) - Amarillo IDESC original */
+    --color-primary-dark: 54 85% 55%; /* Versión más oscura del amarillo original */
     --color-white: 0 0% 100%; /* #FFFFFF */
     --color-black: 0 0% 0%; /* #000000 */
     --color-gray-dark: 220 13% 23%; /* #2D3748 */

@@ -33,14 +33,14 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 relative z-10">
         {/* Resto del contenido del header permanece igual */}
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo-idesc.png"
               alt="IDESC Ingeniería"
               width={180}
               height={60}
-              className="h-24 w-auto"
+              className="h-32 w-auto"
             />
           </Link>
 
@@ -114,7 +114,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black absolute top-20 left-0 right-0">
+          <div className="md:hidden bg-black absolute top-24 left-0 right-0">
             <nav className="flex flex-col space-y-4 p-4">
               <Link href="/" className="text-white hover:text-primary transition-colors font-heading font-medium">
                 INICIO

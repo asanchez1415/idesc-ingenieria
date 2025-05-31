@@ -97,7 +97,7 @@ export default function EnergiaPage() {
       </section>
 
       {/* Servicios */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 font-heading">
             Servicios para Proyectos Energéticos
@@ -162,7 +162,7 @@ export default function EnergiaPage() {
       </section>
 
       {/* Proyectos Destacados */}
-      <section className="py-20 bg-yellow-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 font-heading">
             Proyectos Energéticos Destacados
