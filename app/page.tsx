@@ -128,14 +128,9 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section
-        ref={hero.ref}
-        className={`relative h-screen flex items-end justify-end overflow-hidden transition-opacity duration-700 ${
-          hero.isInView ? 'animate-fade-in-up' : 'opacity-0'
-        }`}
-      >
+      <section className="relative h-screen flex items-end justify-end overflow-hidden">
         {/* Triángulo amarillo en la esquina inferior izquierda */}
-        <div className="absolute left-0 bottom-0 w-1/2 h-1/2 z-20 pointer-events-none">
+        <div className="absolute left-0 bottom-0 w-1/2 h-1/2 z-20 pointer-events-none triangle-hero-animate">
           <svg
             viewBox="0 0 100 100"
             className="w-full h-full"
@@ -179,7 +174,7 @@ export default function HomePage() {
         <div className="relative z-30 w-full flex justify-center">
           <div className="container flex flex-col items-end max-w-7xl px-4 pb-40 md:pb-56 lg:pb-64">
             <p
-              className="text-lg md:text-xl mb-6 leading-relaxed font-body font-normal text-white animate-fade-in-up text-right"
+              className="text-lg md:text-xl mb-6 leading-relaxed font-body font-normal text-white text-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               Presentes en los sectores de <b>Minería</b>, <b>Energía</b>,{' '}
@@ -187,7 +182,7 @@ export default function HomePage() {
               <b>MOP</b> y <b>Rellenos Sanitarios</b>.
             </p>
             <h1
-              className="text-5xl md:text-7xl mb-8 leading-tight font-heading font-bold animate-fade-in-up text-right"
+              className="text-5xl md:text-7xl mb-8 leading-tight font-heading font-bold text-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             >
               <span className="block font-medium text-white">
@@ -201,7 +196,7 @@ export default function HomePage() {
               </span>
             </h1>
             <div
-              className="w-full flex justify-end animate-fade-in-up"
+              className="w-full flex justify-end"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             >
               <Link href="/lineas-de-negocio">
@@ -209,7 +204,7 @@ export default function HomePage() {
                   ref={heroBtnInView.ref}
                   size="lg"
                   className={`border-2 border-[#fbf350] text-[#fbf350] bg-transparent hover:bg-[#fbf350] hover:text-black px-8 py-4 text-lg font-semibold shadow-lg transition-colors duration-200 ${
-                    heroBtnInView.isInView ? 'animate-fade-in-up' : 'opacity-0'
+                    heroBtnInView.isInView ? 'btn-hero-slide-up' : ''
                   }`}
                   style={{ animationFillMode: 'both' }}
                 >
