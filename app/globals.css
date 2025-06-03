@@ -8,36 +8,36 @@
     --color-primary: 57 96% 65%; /* rgb(252, 238, 79) - Amarillo IDESC original */
     --color-primary-dark: 54 85% 55%; /* Versión más oscura del amarillo original */
     --color-white: 0 0% 100%; /* #FFFFFF */
-    --color-black: 0 0% 0%; /* #000000 */
-    --color-gray-dark: 220 13% 23%; /* #2D3748 */
+    --color-black: 0 0% 10%; /* #1A1A1A */
+    --color-gray-dark: 0 0% 10%; /* #1A1A1A */
 
     /* Colores secundarios */
-    --color-gray-blue: 218 17% 35%; /* #4A5568 */
+    --color-gray-blue: 0 0% 10%; /* #1A1A1A */
 
     /* Colores de apoyo */
     --color-success: 151 55% 42%; /* #38A169 - Verde Industrial */
     --color-error: 360 84% 57%; /* #E53E3E - Rojo Suave */
-    --color-gray-light: 214 32% 91%; /* #E2E8F0 */
+    --color-gray-light: 0 0% 10%; /* #1A1A1A */
 
     /* Variables de shadcn/ui */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 0 0% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 10%;
     --primary: 57 96% 65%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 220 13% 23%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 214 32% 91%;
-    --muted-foreground: 218 17% 35%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 10%;
     --accent: 57 96% 65%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 360 84% 57%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
     --ring: 57 96% 65%;
     --radius: 0rem;
   }
@@ -128,5 +128,23 @@
   /* Navegación */
   nav a {
     @apply font-heading font-medium;
+  }
+}
+
+.img-diagonal img {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+@media (max-width: 1024px) {
+  .img-diagonal img {
+    clip-path: none;
+  }
+}
+
+.img-diagonal-vertical img {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+@media (max-width: 1024px) {
+  .img-diagonal-vertical img {
+    clip-path: none;
   }
 }

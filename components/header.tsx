@@ -1,34 +1,34 @@
-"use client"
+'use client';
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
-import Image from "next/image"
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-black" : "bg-transparent"
+        isScrolled ? 'bg-[#1A1A1A]' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 relative z-10">
@@ -46,10 +46,16 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-primary transition-colors font-heading font-medium">
+            <Link
+              href="/"
+              className="text-white hover:text-primary transition-colors font-heading font-medium"
+            >
               INICIO
             </Link>
-            <Link href="/empresa" className="text-white hover:text-primary transition-colors font-heading font-medium">
+            <Link
+              href="/empresa"
+              className="text-white hover:text-primary transition-colors font-heading font-medium"
+            >
               EMPRESA
             </Link>
             <div className="relative group">
@@ -102,13 +108,22 @@ export default function Header() {
               PROYECTOS
             </Link>
             <Link href="/contacto">
-              <Button className="bg-primary hover:bg-primary-dark text-black font-heading font-medium">CONTACTO</Button>
+              <Button className="bg-primary hover:bg-primary-dark text-black font-heading font-medium">
+                CONTACTO
+              </Button>
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -116,7 +131,10 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden bg-black absolute top-24 left-0 right-0">
             <nav className="flex flex-col space-y-4 p-4">
-              <Link href="/" className="text-white hover:text-primary transition-colors font-heading font-medium">
+              <Link
+                href="/"
+                className="text-white hover:text-primary transition-colors font-heading font-medium"
+              >
                 INICIO
               </Link>
               <Link
@@ -178,5 +196,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }
