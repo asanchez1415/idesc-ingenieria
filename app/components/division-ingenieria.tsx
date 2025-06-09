@@ -11,16 +11,19 @@ export const DivisionIngenieria = () => {
   });
 
   const image = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
+  const paragraph = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
 
   return (
     <section
       className="py-20 bg-gray-dark"
-      ref={containerRef}
       style={{ minHeight: '60vh', display: 'flex', alignItems: 'stretch' }}
     >
       <div className="w-full flex flex-col lg:flex-row items-stretch">
         {/* Imagen vertical a la izquierda con triángulo negro en la esquina superior derecha */}
-        <div className="relative lg:h-auto w-full lg:w-[45vw] min-h-[300px]">
+        <div
+          className="relative lg:h-auto w-full lg:w-[45vw] min-h-[300px]"
+          ref={containerRef}
+        >
           <motion.img
             style={{ translateX: image }}
             src="/images/img-idesc-principal-square.webp"
@@ -50,15 +53,18 @@ export const DivisionIngenieria = () => {
         >
           <div className="max-w-xl mx-auto w-full">
             <motion.h2
-              initial={{ opacity: 'offscreen', y: 200 }}
-              whileInView={{ opacity: 'onscreen', y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ amount: 'all', once: true }}
+              //initial={{ opacity: 'offscreen', y: 200 }}
+              //whileInView={{ opacity: 'onscreen', y: 0 }}
+              //transition={{ duration: 0.5 }}
+              //viewport={{ amount: 'all', once: true }}
               className="text-[2.6rem] font-bold mb-8 text-white font-heading"
             >
               División Ingeniería
             </motion.h2>
-            <motion.p className="text-lg text-gray-300 leading-relaxed font-body mb-12 border-l-[3px] border-primary pl-6">
+            <motion.p
+              style={{ translateX: paragraph }}
+              className="text-lg text-gray-300 leading-relaxed font-body mb-12 border-l-[3px] border-primary pl-6"
+            >
               Cada miembro de nuestra empresa trabaja con actitud, compromiso y
               pasión en el cumplimiento de sus responsabilidades, con el
               objetivo de que nuestros clientes y comunidades nos reconozcan
@@ -69,7 +75,10 @@ export const DivisionIngenieria = () => {
             <h2 className="text-[2.6rem] font-bold mb-8 text-white font-heading">
               ¿Por qué elegir IDESC?
             </h2>
-            <motion.p className="text-lg text-gray-300 leading-relaxed font-body mb-8 border-l-[3px] border-primary pl-6">
+            <motion.p
+              style={{ translateX: paragraph }}
+              className="text-lg text-gray-300 leading-relaxed font-body mb-8 border-l-[3px] border-primary pl-6"
+            >
               Nuestros diversos proyectos en la industria son nuestro activo más
               valioso. Nos dedicamos al <b className="text-primary">100%</b> al
               desarrollo y ejecución de los mismos de manera flexible,
