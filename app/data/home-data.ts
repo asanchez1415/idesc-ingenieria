@@ -9,6 +9,12 @@ export interface Sector {
   image: string;
 }
 
+export interface ProyectosDestacados {
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
 export const clientes: Cliente[] = [
   { name: 'CCU', logo: '/images/clientes/ccu-logo.webp' },
   { name: 'Metlen Energy & Metals', logo: '/images/clientes/metlen.webp' },
@@ -85,5 +91,38 @@ export const sectores: Sector[] = [
     description:
       'Soluciones integrales en infraestructura civil para proyectos industriales y comerciales.',
     image: '/images/sectors/obras-civiles-sector-experiencia.webp',
+  },
+];
+
+export const proyectosDestacados: ProyectosDestacados[] = [
+  {
+    title: 'Central Hidroeléctrica Los Lagos',
+    subtitle: 'Extracción & Transporte Empréstito, Osorno 2024',
+    image: '/images/proyectos/central-hidroelectrica-los-lagos.webp',
+  },
+  {
+    title: 'PFV Meseta Los Andes',
+    subtitle: 'Parque Fotovoltaico 2022',
+    image: '/images/proyectos/pfv-meseta-los-andes-2022.webp',
+  },
+  {
+    title: 'Desembanque & Perfilado Quebrada de Macul',
+    subtitle: 'Santiago 2023',
+    image: '/images/proyectos/desembanque-perfilado-quebrada-macul-2023.webp',
+  },
+  {
+    title: 'Encauzamiento Río Mapocho',
+    subtitle: 'Santiago 2023',
+    image: '/images/proyectos/encauzamiento-rio-mapocho-2023.webp',
+  },
+  {
+    title: 'Desembanque & Perfilado Río Mapocho',
+    subtitle: 'Santiago 2024',
+    image: '/images/proyectos/desembanque-perfilado-rio-mapocho-2024.webp',
+  },
+  {
+    title: 'PFV Tamarico Fase I',
+    subtitle: 'Vallenar 2023',
+    image: '/images/proyectos/pfv-tamarico-fase-i-2023.webp',
   },
 ];
