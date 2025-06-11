@@ -134,35 +134,38 @@ export const DivisionIngenieria = () => {
               <IdescIcon color="#7A7A7A" width="100%" height="100%" />
             </motion.div>
 
-            <motion.div
-              style={{ translateX: paragraphRight }}
-              className="max-w-xl mx-auto w-full relative z-10"
-            >
-              <h2 className="text-[2.6rem] font-bold mb-8 text-black font-heading">
-                ¿Por qué elegir IDESC?
-              </h2>
-              <p className="text-lg text-black leading-relaxed font-body mb-8 border-l-[3px] border-black pl-6">
-                Nuestros diversos proyectos en la industria son nuestro activo
-                más valioso. Nos dedicamos al{' '}
-                <b className="text-black font-extrabold">100%</b> al desarrollo
-                y ejecución de los mismos de manera flexible, adaptándonos a los
-                requerimientos para cumplir con los plazos establecidos y los
-                estándares de calidad. Trabajamos en equipo con las áreas de{' '}
-                <b className="text-black font-extrabold">riesgo</b>,{' '}
-                <b className="text-black font-extrabold">calidad</b>,{' '}
-                <b className="text-black font-extrabold">recursos humanos</b> y{' '}
-                <b className="text-black font-extrabold">medio ambiente</b>.
-              </p>
-              <div>
-                <Link href="/empresa">
-                  <Button
-                    className={`bg-black text-white transition-all duration-700 }`}
-                  >
-                    CONOCE MÁS SOBRE NOSOTROS
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
+            <div className="overflow-hidden relative z-10">
+              <motion.div
+                style={{ translateX: paragraphRight }}
+                className="max-w-xl mx-auto w-full"
+              >
+                <h2 className="text-[2.6rem] font-bold mb-8 text-black font-heading">
+                  ¿Por qué elegir IDESC?
+                </h2>
+                <p className="text-lg text-black leading-relaxed font-body mb-8 border-l-[3px] border-black pl-6">
+                  Nuestros diversos proyectos en la industria son nuestro activo
+                  más valioso. Nos dedicamos al{' '}
+                  <b className="text-black font-extrabold">100%</b> al
+                  desarrollo y ejecución de los mismos de manera flexible,
+                  adaptándonos a los requerimientos para cumplir con los plazos
+                  establecidos y los estándares de calidad. Trabajamos en equipo
+                  con las áreas de{' '}
+                  <b className="text-black font-extrabold">riesgo</b>,{' '}
+                  <b className="text-black font-extrabold">calidad</b>,{' '}
+                  <b className="text-black font-extrabold">recursos humanos</b>{' '}
+                  y <b className="text-black font-extrabold">medio ambiente</b>.
+                </p>
+                <div>
+                  <Link href="/empresa">
+                    <Button
+                      className={`bg-black text-white transition-all duration-700 }`}
+                    >
+                      CONOCE MÁS SOBRE NOSOTROS
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
