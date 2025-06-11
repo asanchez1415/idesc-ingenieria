@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useRef } from 'react';
+import IdescIcon from '@/public/images/idesc-icon';
 
 export const DivisionIngenieria = () => {
   const containerRefLeft = useRef(null);
@@ -64,7 +65,7 @@ export const DivisionIngenieria = () => {
             ref={containerRefRight}
           >
             <img
-              src="/images/img-idesc-principal-square.webp"
+              src="/images/division-ingenieria/Division-Ingenieria.webp"
               alt="Trabajador de IDESC en sitio de construcción con excavadora Komatsu"
               className={`object-cover}`}
             ></img>
@@ -88,14 +89,14 @@ export const DivisionIngenieria = () => {
 
       {/* Sección 2 de Porqué elegir idesc -------------------------------- */}
       <section
-        className="bg-gray-dark"
+        className="bg-white"
         style={{ minHeight: '60vh', display: 'flex', alignItems: 'stretch' }}
       >
         <div className="w-full flex flex-col lg:flex-row items-stretch">
           {/* Imagen vertical a la izquierda con triángulo negro en la esquina superior derecha */}
           <div className="relative lg:h-auto w-full lg:w-[45vw] min-h-[300px]">
             <img
-              src="/images/img-idesc-principal-square.webp"
+              src="/images/division-ingenieria/Por-Que-Elegir-IDESC.webp"
               alt="Trabajador de IDESC en sitio de construcción con excavadora Komatsu"
               className={`object-cover}`}
             ></img>
@@ -110,7 +111,7 @@ export const DivisionIngenieria = () => {
                 height="100%"
                 preserveAspectRatio="none"
               >
-                <polygon points="100,0 100,100 0,0" fill="#1A1A1A" />
+                <polygon points="100,0 100,100 0,0" fill="white" />
               </svg>
             </div>
           </div>
@@ -118,32 +119,44 @@ export const DivisionIngenieria = () => {
           {/* Contenido a la derecha */}
           <div
             ref={containerRefRight}
-            className="flex-1 flex flex-col justify-center px-6 py-16 lg:py-0 lg:px-16"
-            style={{ background: 'var(--color-black)' }}
+            className="flex-1 flex flex-col justify-center px-6 py-16 lg:py-0 lg:px-16 relative"
+            style={{ background: 'var(--color-white)' }}
           >
+            {/* Logo de fondo en la esquina inferior derecha */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.3 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 1 }}
+              className="absolute bottom-0 right-0 pointer-events-none z-0"
+              style={{ width: '320px', height: '320px' }}
+            >
+              <IdescIcon color="#7A7A7A" width="100%" height="100%" />
+            </motion.div>
+
             <motion.div
               style={{ translateX: paragraphRight }}
-              className="max-w-xl mx-auto w-full"
+              className="max-w-xl mx-auto w-full relative z-10"
             >
-              <h2 className="text-[2.6rem] font-bold mb-8 text-white font-heading">
+              <h2 className="text-[2.6rem] font-bold mb-8 text-black font-heading">
                 ¿Por qué elegir IDESC?
               </h2>
-              <p className="text-lg text-gray-300 leading-relaxed font-body mb-8 border-l-[3px] border-primary pl-6">
+              <p className="text-lg text-black leading-relaxed font-body mb-8 border-l-[3px] border-black pl-6">
                 Nuestros diversos proyectos en la industria son nuestro activo
                 más valioso. Nos dedicamos al{' '}
-                <b className="text-primary">100%</b> al desarrollo y ejecución
-                de los mismos de manera flexible, adaptándonos a los
+                <b className="text-black font-extrabold">100%</b> al desarrollo
+                y ejecución de los mismos de manera flexible, adaptándonos a los
                 requerimientos para cumplir con los plazos establecidos y los
                 estándares de calidad. Trabajamos en equipo con las áreas de{' '}
-                <b className="text-primary">riesgo</b>,{' '}
-                <b className="text-primary">calidad</b>,{' '}
-                <b className="text-primary">recursos humanos</b> y{' '}
-                <b className="text-primary">medio ambiente</b>.
+                <b className="text-black font-extrabold">riesgo</b>,{' '}
+                <b className="text-black font-extrabold">calidad</b>,{' '}
+                <b className="text-black font-extrabold">recursos humanos</b> y{' '}
+                <b className="text-black font-extrabold">medio ambiente</b>.
               </p>
               <div>
                 <Link href="/empresa">
                   <Button
-                    className={`bg-primary text-black hover:bg-primary-dark transition-all duration-700 }`}
+                    className={`bg-black text-white transition-all duration-700 }`}
                   >
                     CONOCE MÁS SOBRE NOSOTROS
                   </Button>
